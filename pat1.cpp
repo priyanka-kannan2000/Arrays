@@ -1,0 +1,34 @@
+#include<stdio.h>
+main()
+{
+	int n,i,j,f;
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+		if(i%2!=0)
+		{
+			f=((i*(i+1))/2);
+			for(j=1;j<=i;j++)
+			{
+				if(j==i)
+				printf("%d",f);
+				else
+				printf("%d*",f);
+				f--;
+			}
+		}
+		else
+		{
+			f=((i*(i-1))/2)+1;
+			for(j=1;j<=i;j++)
+			{
+				if(j==i)
+				printf("%d",f);
+				else
+				printf("%d*",f);
+				f++;
+			}
+		}
+		printf("\n");
+	}
+}
